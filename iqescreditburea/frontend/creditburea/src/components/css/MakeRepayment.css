@@ -1,0 +1,318 @@
+/* MakeRepayment.css */
+
+.repayment-container {
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #343a40;
+}
+
+.repayment-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background-color: #007bff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.user-greeting h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a202c;
+  margin: 0;
+}
+
+.user-greeting p {
+  font-size: 1rem;
+  color: #495057;
+  margin: 0.25rem 0 0;
+}
+
+.loan-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  flex: 1;
+  text-align: center;
+}
+
+.stat-box.total {
+  background-color: #007bff;
+}
+
+.stat-box.pending {
+  background-color: #ffc107;
+}
+
+.stat-box.approved {
+  background-color: #28a745;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.filter-btn:hover {
+  background-color: #e9ecef;
+}
+
+.filter-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+.loan-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.loan-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.loan-card h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a202c;
+  margin: 0 0 1rem;
+}
+
+.loan-card p {
+  font-size: 0.95rem;
+  color: #495057;
+  margin: 0.5rem 0;
+}
+
+.repayment-input {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.amount-input {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #343a40;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.amount-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+.repay-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #28a745;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.repay-btn:hover {
+  background-color: #218838;
+}
+
+.repay-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+}
+
+.repay-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0;
+}
+
+.loading-text {
+  font-size: 1rem;
+  color: #495057;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.no-loans-text {
+  font-size: 1rem;
+  color: #495057;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.dashboard-nav {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.dashboard-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dashboard-btn:hover {
+  background-color: #0056b3;
+}
+
+.dashboard-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .repayment-container {
+    padding: 1rem;
+  }
+
+  .repayment-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .user-greeting h3 {
+    font-size: 1.25rem;
+  }
+
+  .loan-stats {
+    flex-direction: column;
+  }
+
+  .filter-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .loan-cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .amount-input,
+  .repay-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .repayment-container {
+    padding: 0.75rem;
+  }
+
+  .loan-card {
+    padding: 1rem;
+  }
+
+  .loan-card h4 {
+    font-size: 1.25rem;
+  }
+
+  .global-message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+.global-message.error {
+  background-color: #ffe6e6;
+  color: #d32f2f;
+}
+.global-message.success {
+  background-color: #e6ffed;
+  color: #2e7d32;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.pagination button:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+.pagination span {
+  font-size: 1rem;
+}
+
+  .loan-card p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,44 @@
+.borrower-dashboard-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    flex-direction: row;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    order: 0;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  
+  .nav-section button {
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    padding: 12px 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  
+  .nav-section button:hover {
+    background-color: #334155;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #f1f5f9;
+  }

@@ -1,0 +1,107 @@
+.user-management-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .user-management-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .error-text {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .user-table th,
+  .user-table td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  .user-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .user-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .user-table td input,
+  .user-table td select {
+    width: 95%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+  }
+  
+  .user-table td button {
+    margin-right: 5px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .user-table td .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .user-table td .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .user-table td button:not(.delete-btn) {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .user-table td button:not(.delete-btn):hover {
+    background-color: #1976d2;
+  }
+ .back-to-dashboard-btn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.back-to-dashboard-btn:hover {
+  background-color: #e0e0e0;
+}
+  

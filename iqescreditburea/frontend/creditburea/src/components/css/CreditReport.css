@@ -1,0 +1,397 @@
+/* CreditReport.css - Complete CSS with Fixed Label Wrapping */
+
+:root {
+  /* Color Palette */
+  --primary: #4361ee;
+  --primary-dark: #3a56d4;
+  --primary-light: #eef2ff;
+  --secondary: #3f37c9;
+  --success: #28a745;
+  --danger: #d32f2f;
+  --warning: #f8961e;
+  --info: #4895ef;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --border-color: #dee2e6;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Typography */
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Base Styles */
+.credit-report-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: var(--space-xl);
+  background-color: #f5f9ff;
+  font-family: var(--font-main);
+}
+
+.credit-report-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: var(--space-xl);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Title */
+.report-title {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+/* Error Message */
+.error-message {
+  background-color: #ffe6e6;
+  color: var(--danger);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  border: 1px solid rgba(211, 47, 47, 0.2);
+}
+
+/* Form Styles */
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Form Labels */
+.form-label {
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  white-space: nowrap; /* Prevents text wrapping on larger screens */
+  margin-bottom: var(--space-xs);
+}
+
+/* Form Inputs */
+.form-input {
+  padding: 0.75rem var(--space-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  background-color: white;
+}
+
+.form-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+  outline: none;
+}
+
+.form-input:invalid:focus {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
+}
+
+/* Financial Accounts Specific Styles */
+.accounts-input-container {
+  position: relative;
+}
+
+.accounts-tooltip {
+  position: absolute;
+  right: var(--space-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.25rem var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.form-input-accounts {
+  padding-right: 6rem;
+}
+
+.form-input-accounts:placeholder-shown + .accounts-tooltip {
+  opacity: 1;
+}
+
+/* Accounts Preview */
+.accounts-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+  min-height: 1.75rem;
+}
+
+.account-tag {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  padding: 0.25rem var(--space-sm);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(67, 97, 238, 0.2);
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 0.75rem var(--space-lg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: var(--success);
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Back Button */
+.back-button-inline,
+.back-button {
+  background-color: var(--gray);
+  color: white;
+}
+
+.back-button-inline:hover,
+.back-button:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+}
+
+/* Summary Styles */
+.report-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.summary-header h3 {
+  font-size: 1.5rem;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.success-icon {
+  color: var(--success);
+}
+
+/* Reset Button */
+.reset-button {
+  background-color: var(--warning);
+  color: var(--dark);
+}
+
+.reset-button:hover {
+  background-color: #e0a800;
+}
+
+/* Summary Content */
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.summary-section {
+  background-color: var(--light);
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+}
+
+.summary-section h4 {
+  font-size: 1.2rem;
+  color: var(--dark);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.summary-section p {
+  margin: 0.5rem 0;
+  color: var(--dark);
+  font-size: 0.95rem;
+}
+
+/* Accounts List */
+.accounts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accounts-list li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.95rem;
+}
+
+/* Credit Score Display */
+.credit-score-display {
+  text-align: center;
+  margin: var(--space-md) 0;
+}
+
+.score-value {
+  font-size: 2.5rem;
+  color: var(--primary);
+  display: block;
+}
+
+.score-label {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+/* Summary Footer */
+.summary-footer {
+  margin-top: var(--space-lg);
+  text-align: center;
+}
+
+.disclaimer {
+  color: var(--danger);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  justify-content: center;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .credit-report-card {
+    padding: var(--space-lg);
+  }
+
+  .form-label {
+    white-space: normal; /* Allow wrapping on smaller screens */
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .report-title {
+    font-size: 1.5rem;
+  }
+
+  .summary-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .score-value {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .credit-report-container {
+    padding: var(--space-md);
+  }
+
+  .form-input {
+    padding: 0.65rem var(--space-sm);
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    padding: 0.65rem var(--space-md);
+  }
+}

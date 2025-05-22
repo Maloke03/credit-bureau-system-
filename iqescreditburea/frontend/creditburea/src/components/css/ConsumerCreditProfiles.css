@@ -1,0 +1,134 @@
+/* Container */
+.consumer-credit-profiles-container {
+  max-width: 100%; /* Fit main-content */
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.consumer-credit-profiles-container h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0; /* Remove bottom margin for header-container */
+}
+
+/* Back Button */
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* General paragraph */
+.consumer-credit-profiles-container p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+  margin-left: 20px; /* Optional: Shift table to the right */
+}
+
+/* Table Styling */
+.credit-reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  min-width: 800px;
+}
+
+.credit-reports-table th,
+.credit-reports-table td {
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.credit-reports-table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+.credit-reports-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.credit-reports-table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Error Message */
+.error {
+  font-size: 16px;
+  color: #dc3545;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .consumer-credit-profiles-container {
+    padding: 15px;
+  }
+
+  .table-container {
+    margin-left: 0;
+  }
+
+  .credit-reports-table th,
+  .credit-reports-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .back-button {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .credit-reports-table {
+    font-size: 10px;
+  }
+
+  .credit-reports-table th,
+  .credit-reports-table td {
+    padding: 6px;
+  }
+}

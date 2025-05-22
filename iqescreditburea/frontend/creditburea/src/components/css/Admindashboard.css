@@ -1,0 +1,104 @@
+/* Overall container */
+.admin-dashboard-container {
+  display: flex;
+  min-height: 100vh; /* Full page height */
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 200px; /* As previously updated */
+  background-color: #1e293b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Sidebar heading */
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+/* Sidebar navigation section */
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* spacing between buttons */
+}
+
+/* Sidebar buttons */
+.nav-section button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-section button:hover {
+  background-color: #334155;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f1f5f9;
+  overflow-y: auto;
+}
+
+/* Full-width class for main-content when sidebar is hidden */
+.main-content.full-width {
+  width: 100%; /* Take up full container width */
+}
+
+/* Heading in main content */
+.main-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Subheading */
+.main-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #e2e8f0;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Loading and error messages */
+.main-content > div, .main-content > p {
+  font-size: 18px;
+  color: #475569;
+  margin-top: 20px;
+}

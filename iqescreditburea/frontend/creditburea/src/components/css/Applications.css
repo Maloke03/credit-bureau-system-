@@ -1,0 +1,133 @@
+/* Container */
+.loan-applications-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.loan-applications-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+/* Back Button */
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* General paragraph */
+.loan-applications-container p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Table Styling */
+.loan-applications-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  min-width: 600px; /* Ensure table is wide enough but scrolls if needed */
+}
+
+.loan-applications-container th,
+.loan-applications-container td {
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.loan-applications-container th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+.loan-applications-container tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.loan-applications-container tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Error and Loading Messages */
+.loan-applications-container > div {
+  font-size: 16px;
+  color: #dc3545;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loan-applications-container {
+    padding: 15px;
+  }
+
+  .table-container {
+    margin-left: 0;
+  }
+
+  .loan-applications-container th,
+  .loan-applications-container td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .back-button {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .loan-applications-container table {
+    font-size: 10px;
+  }
+
+  .loan-applications-container th,
+  .loan-applications-container td {
+    padding: 6px;
+  }
+}
